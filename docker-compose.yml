@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=saass-api
+      - POSTGRES_PASSWORD=saass-api
+      - POSTGRES_DB=saass-api
+    volumes:
+      - saass_api_data:/bitnami/postgresql
+
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
+
+    volumes:
+      - saass_api_redis_data:/bitnami/redis/data
+volumes:
+  saass_api_data:
+  saass_api_redis_data:
