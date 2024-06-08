@@ -19,11 +19,11 @@ model Users {
   user_photo String?
   user_cover String?
   user_name  String
-  user_username String?
+  user_username String? @unique
   user_about String?
   user_location String?
-  user_email String?
-  user_password String?
+  user_email String @unique
+  user_password String
   user_token String?
   user_phone String?
   user_status UserStatus  @default(CONFIRM)

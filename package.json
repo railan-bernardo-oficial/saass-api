@@ -4,19 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/http/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
     "prisma": "^5.15.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.14.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
     "fastify": "^4.27.0",
+    "jsonwebtoken": "^9.0.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.12.0"
   }
